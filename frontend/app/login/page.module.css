@@ -1,0 +1,186 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2.75rem 2.5rem;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Logo ── */
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  margin-bottom: 2rem;
+  display: inline-block;
+  transition: color 0.14s;
+}
+
+.logo:hover {
+  color: var(--accent);
+}
+
+/* ── Heading ── */
+.heading {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+}
+
+.sub {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  margin: 0 0 1.75rem;
+  line-height: 1.5;
+}
+
+/* ── Error ── */
+.error {
+  padding: 0.75rem 1rem;
+  background: #fdf2f2;
+  border: 1px solid #f0c0c0;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  color: #b54040;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Form ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+.input {
+  height: 44px;
+  padding: 0 0.95rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--ink-light);
+  opacity: 0.7;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(181, 84, 26, 0.1);
+}
+
+/* ── Submit ── */
+.submit {
+  margin-top: 0.5rem;
+  height: 46px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ── Footer link ── */
+.footer {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  color: var(--ink-light);
+  text-align: center;
+  margin-top: 1.75rem;
+}
+
+.link {
+  color: var(--accent);
+  font-weight: 600;
+  transition: color 0.14s;
+}
+
+.link:hover {
+  color: var(--accent-hover);
+}
+
+/* ── Divider (used by register for the OR separator) ── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.25rem 0;
+  color: var(--ink-light);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.5rem;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+}

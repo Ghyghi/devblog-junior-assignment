@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin: 3rem auto 0;
+  padding: 0 2rem;
+}
+
+.page,
+.arrow {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.14s, color 0.14s, background 0.14s;
+}
+
+.page:hover:not(:disabled),
+.arrow:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff !important;
+}
+
+.arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.ellipsis {
+  color: var(--ink-light);
+  font-size: 0.85rem;
+  padding: 0 0.25rem;
+  user-select: none;
+}

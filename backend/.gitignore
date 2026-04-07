@@ -1,0 +1,16 @@
+# SQLite database files
+.sqlite
+.sqlite3
+.db
+database.sqlite
+
+# Logs
+logs
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+.env
